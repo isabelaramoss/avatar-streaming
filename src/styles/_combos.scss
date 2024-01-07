@@ -1,0 +1,87 @@
+@use 'config/var';
+
+.combos{
+  padding: 5.6vw;
+
+  h2{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+
+    .combo{
+      &__2more{
+        border-radius: 5px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corFundoAmareloEscuro;
+      }
+
+      &__all{
+        border-radius: 5px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corFundoRosaEscuro;
+      }
+
+    }
+
+    &__item{
+      text-align: center;
+      padding: 50px 44px 30px;
+      max-width: 380px;
+      width: 100%;
+
+      @media (max-width: 768px){
+        margin-bottom: 24px;
+      }
+
+      strong{
+        color: var.$corBranca;
+      }
+
+      img{
+        max-width: 204px;
+        max-height: 204px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+      }
+
+      p{
+        color: var.$corBranca;
+        text-align: justify;
+        margin-bottom: 16px;
+      }
+
+      .button{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corBranca;
+        color: var.$corTexto;
+        text-transform: none;
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+      
+        &__2more{
+          &:hover{
+            background-color: var.$corFundoAmarelo;
+            color: var.$corBranca;
+          }
+        }
+
+        &__all{
+          &:hover{
+            background-color: var.$corFundoRosa;
+            color: var.$corBranca;
+          }
+        }
+      }
+    }
+  }
+
+}

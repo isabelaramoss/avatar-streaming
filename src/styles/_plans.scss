@@ -1,0 +1,112 @@
+@use 'config/var';
+
+.plans{
+  padding: 5.6vw;
+
+  h2{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+
+    .plan{
+      &__water{
+        border-radius: 5px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corFundoAzulEscuro;
+      }
+
+      &__earth{
+        border-radius: 5px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corFundoVerdeEscuro;
+      }
+
+      &__fire{
+        border-radius: 5px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corFundoVermelhoEscuro;
+      }
+
+      &__air{
+        border-radius: 5px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corFundoLaranjaEscuro;
+      }
+    }
+
+    &__item{
+      text-align: center;
+      padding: 50px 44px 30px;
+      max-width: 380px;
+      width: 100%;
+
+      @media (max-width: 768px){
+        margin-bottom: 24px;
+      }
+      strong{
+        color: var.$corBranca;
+        
+      }
+
+      img{
+        max-width: 204px;
+        max-height: 204px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        
+      }
+
+      p{
+        color: var.$corBranca;
+        text-align: justify;
+        margin-bottom: 16px;
+      }
+
+      .button{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid var.$corBotaoPreto;
+        background: var.$corBranca;
+        color: var.$corTexto;
+        text-transform: none;
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+      
+        &__water{
+          &:hover{
+            background-color: var.$corFundoAzul;
+            color: var.$corBranca;
+          }
+        }
+
+        &__earth{
+          &:hover{
+            background-color: var.$corFundoVerde;
+            color: var.$corBranca;
+          }
+        }
+
+        &__fire{
+          &:hover{
+            background-color: var.$corFundoVermelho;
+            color: var.$corBranca;
+          }
+        }
+        &__air{
+          &:hover{
+            background-color: var.$corFundoLaranja;
+            color: var.$corBranca;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,50 @@
+@use 'config/var';
+
+.hero{
+  padding: 5.6vw;
+  min-height: 80vh;
+  background-image: url(../../dist/images/bg-image-md.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media (max-width: 768px) {
+    background-image: none;
+    align-items: center;
+    background-color: var.$corFundoHero;
+    padding: 9.6vw;
+    min-height: 54vh;
+    img{
+      width: 100%;
+    }
+  }
+
+  @media (min-height: 961px){
+    background-image: url(../../dist/images/bg-image.png);
+  }
+
+  &__content{
+    width: 60%;
+    margin-top: 56px;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      
+    }
+
+    h3{
+      font-weight: normal;
+      font-style: italic;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+
+    button{
+      padding: 12px 50px;
+      margin-bottom: 8px;
+    }
+
+  }
+
+}

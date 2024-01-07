@@ -1,0 +1,117 @@
+@use 'config/reset';
+@use 'config/var';
+@use 'hero';
+@use 'header';
+@use 'plans';
+@use 'combos';
+@use 'faq';
+@use 'footer';
+
+body{
+  background-color: rgb(243, 243, 243);
+}
+
+@mixin text($fontSize: 16px){
+  color: var.$corTexto;
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 40px){
+  @include text($fontSize);
+  color: var.$corTexto;
+}
+
+.text--big{
+  @include text(18px);
+
+  @media (max-width: 768px){
+    @include text(15px);
+  }
+}
+
+.text{
+  @include text;
+
+  @media (max-width: 768px){
+    @include text(14px);
+  }
+}
+
+.text--small{
+  @include text(12px);
+
+  @media (max-width: 768px){
+    @include text(11px);
+  }
+}
+
+.title--big{
+  @include title(44px);
+
+  @media (max-width: 768px){
+    @include title(26px);
+  }
+}
+
+.title{
+  @include title;
+
+  @media (max-width: 768px){
+    @include title(24px);
+  }
+}
+
+.title--small{
+  @include title(28px);
+
+  @media (max-width: 768px){
+    @include title(22px);
+  }
+}
+
+.link-text{
+  @include text(18px);
+  color: var.$corTexto;
+  text-decoration: underline;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var.$corBranca;
+  background-color: var.$corBotaoRoxo;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid var.$corBotaoRoxo;
+  cursor: pointer;
+
+  &:hover{
+    background-color: darken(var.$corBotaoRoxo, 3%);
+  }
+
+  &--secondary{
+    background-color: var.$corBotaoSecundario;
+    border-color: var.$corBotaoSecundario;
+
+    &:hover{
+      background-color: darken(var.$corBotaoSecundario, 5%);
+    }
+  }
+
+  &--dark{
+    background-color: var.$corFundoHeader;
+    border-color: var.$corTexto;
+    color: var.$corTexto;
+
+    &:hover{
+      background-color: var.$corTexto;
+      color: var.$corBranca;
+    }
+  }
+}
